@@ -10,6 +10,7 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Node (if added later)
+# Node
 node_modules/
-dist/
+
+# Note: dist/ is NOT ignored - it contains the built extension

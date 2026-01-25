@@ -1,57 +1,76 @@
 # Yandex Disk Search
 
-Расширение Chrome для быстрого поиска по файлам и папкам на публичных страницах Яндекс Диска.
+Chrome extension for fast file search on public Yandex Disk pages.
 
-## 🚀 Возможности
+## Features
 
-- **Быстрый поиск** — фильтрация файлов в реальном времени
-- **Автозагрузка** — автоматически загружает все файлы при первом поиске
-- **Поддержка виртуального скролла** — работает с большими папками (500+ файлов)
-- **Горячие клавиши** — `Cmd/Ctrl + F` для фокуса на поиске, `Esc` для очистки
-- **Счётчик результатов** — показывает количество найденных файлов
-- **Современный дизайн** — адаптивный интерфейс с blur-эффектом
+- **Real-time filtering** — instant search results as you type
+- **Virtual scroll support** — works with large folders (500+ files)
+- **Keyboard shortcuts** — `Cmd/Ctrl + F` to focus, `Esc` to clear
+- **Copy download links** — hover over file to copy direct download URL
+- **Ad blocking** — removes promotional elements
+- **Modern UI** — glassmorphism design with blur effects
 
-## 📦 Установка
+## Installation
 
-### Из Chrome Web Store
-*(Скоро)*
-
-### Ручная установка
-1. Скачайте `yandex-disk-search-v1.0.0.zip`
-2. Распакуйте архив
-3. Откройте `chrome://extensions/`
-4. Включите "Режим разработчика"
-5. Нажмите "Загрузить распакованное расширение"
-6. Выберите папку с расширением
-
-## 🎯 Использование
-
-1. Откройте публичную папку на Яндекс Диске
-2. Введите текст в строку поиска
-3. Результаты фильтруются мгновенно
-
-## 🔧 Разработка
-
+### From source
 ```bash
-# Структура проекта
-yandex-disk-search/
-├── manifest.json       # Манифест расширения
-├── content.js          # Основной скрипт
-├── styles.css          # Стили (неиспользуемые, всё в JS)
-├── icons/              # Иконки расширения
-│   ├── icon16.png
-│   ├── icon48.png
-│   └── icon128.png
-└── _locales/           # Локализация
-    ├── ru/messages.json
-    └── en/messages.json
+git clone https://github.com/anatolykoptev/yandex-disk-search.git
+cd yandex-disk-search
+npm install
+npm run build
 ```
 
-## 📋 Требования
+Then load in Chrome:
+1. Open `chrome://extensions/`
+2. Enable "Developer mode"
+3. Click "Load unpacked"
+4. Select the project folder
 
-- Chrome 88+ (Manifest V3)
-- Работает на страницах `disk.yandex.ru`
+## Development
 
-## 📄 Лицензия
+```bash
+npm run watch    # Watch mode with auto-rebuild
+npm run build    # Production build
+npm run type-check  # TypeScript validation
+```
 
-MIT License
+## Project Structure
+
+```
+yandex-disk-search/
+├── src/
+│   ├── types/           # TypeScript interfaces
+│   ├── constants/       # Config, timeouts, styles
+│   ├── services/        # Business logic
+│   │   ├── state.ts     # State management
+│   │   ├── filter.ts    # Search filtering
+│   │   ├── harvester.ts # File list loader
+│   │   └── copy-handler.ts
+│   ├── ui/
+│   │   └── search-bar.ts
+│   ├── utils/           # DOM helpers, logger
+│   └── content.ts       # Entry point
+├── dist/
+│   └── content.js       # Built extension
+├── icons/
+├── _locales/
+├── manifest.json
+├── tsconfig.json
+└── package.json
+```
+
+## Tech Stack
+
+- TypeScript 5.9
+- esbuild (bundler)
+- Chrome Extension Manifest V3
+
+## Requirements
+
+- Chrome 88+
+- Works on `disk.yandex.ru` pages
+
+## License
+
+MIT

@@ -1,0 +1,27 @@
+{
+  "name": "yandex-disk-search",
+  "version": "2.2.6",
+  "description": "Chrome extension for searching files on public Yandex Disk pages",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/content.ts --bundle --outfile=dist/content.js --target=chrome88 --format=iife",
+    "watch": "esbuild src/content.ts --bundle --outfile=dist/content.js --target=chrome88 --format=iife --watch",
+    "type-check": "tsc --noEmit",
+    "lint": "tsc --noEmit && echo 'Types OK'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anatolykoptev/yandex-disk-search.git"
+  },
+  "keywords": ["chrome-extension", "yandex-disk", "search"],
+  "author": "anatolykoptev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anatolykoptev/yandex-disk-search/issues"
+  },
+  "homepage": "https://github.com/anatolykoptev/yandex-disk-search#readme",
+  "devDependencies": {
+    "esbuild": "^0.27.2",
+    "typescript": "^5.9.3"
+  }
+}
