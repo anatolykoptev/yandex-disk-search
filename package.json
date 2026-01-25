@@ -4,7 +4,7 @@
   "description": "Chrome extension for searching files on public Yandex Disk pages",
   "type": "module",
   "scripts": {
-    "build": "esbuild src/content.ts --bundle --outfile=dist/content.js --target=chrome88 --format=iife",
+    "build": "esbuild src/content.ts --bundle --outfile=dist/content.js --target=chrome88 --format=iife && cp src/styles/content.css dist/",
     "watch": "esbuild src/content.ts --bundle --outfile=dist/content.js --target=chrome88 --format=iife --watch",
     "type-check": "tsc --noEmit",
     "lint": "eslint src/",

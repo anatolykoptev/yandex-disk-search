@@ -1,6 +1,5 @@
 import { CONFIG, TIMEOUTS } from '../constants/config';
-import { STYLES } from '../constants/styles';
-import { injectStyles, removeElement } from '../utils/dom';
+import { removeElement } from '../utils/dom';
 import { log } from '../utils/logger';
 import type { StateManager } from '../services/state';
 import type { ItemHarvester } from '../services/harvester';
@@ -44,8 +43,6 @@ export class SearchUI {
   create(): boolean {
     if (document.getElementById('yds-search-bar')) return false;
 
-    injectStyles('yds-styles', STYLES);
-
     const bar = document.createElement('div');
     bar.id = 'yds-search-bar';
     bar.innerHTML = SEARCH_BAR_HTML;
@@ -81,7 +78,6 @@ export class SearchUI {
     this.modalObserver?.disconnect();
     this.listingObserver?.disconnect();
     removeElement('yds-search-bar');
-    removeElement('yds-styles');
     document.body.classList.remove('yds-page-offset');
   }
 

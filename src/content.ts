@@ -4,8 +4,6 @@
  */
 
 import { CONFIG, TIMEOUTS } from './constants/config';
-import { AD_BLOCK_STYLES } from './constants/styles';
-import { injectStyles } from './utils/dom';
 import { logVersion } from './utils/logger';
 import { StateManager } from './services/state';
 import { ItemHarvester } from './services/harvester';
@@ -62,8 +60,6 @@ class YandexDiskSearch {
 
 function bootstrap(): void {
   if (window.__YandexDiskSearch) return;
-
-  injectStyles('yds-adblock', AD_BLOCK_STYLES);
 
   const app = new YandexDiskSearch();
   window.__YandexDiskSearch = app;
