@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Yandex Disk Search",
+  "version": "2.2.6",
+  "description": "Быстрый поиск по файлам и папкам на публичных страницах Яндекс Диска. Поддержка виртуального скролла, фильтрация в реальном времени.",
+  "default_locale": "ru",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": ["*://disk.yandex.ru/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://disk.yandex.ru/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+/**
+ * Yandex Disk Search v1.3.0 Styles
+ * Light theme, placed after header
+ */
+
+#yds-search {
+    padding: 14px 24px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.yds-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#yds-input {
+    flex: 1;
+    padding: 12px 16px;
+    background: #f5f5f7;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #1a1a1a;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+#yds-input:focus {
+    background: #fff;
+    border-color: #ffcc00;
+    box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.2);
+}
+
+#yds-input::placeholder {
+    color: #999;
+}
+
+#yds-counter {
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+    min-width: 100px;
+    text-align: right;
+}
+
+#yds-status {
+    text-align: center;
+    font-size: 13px;
+    color: #e69500;
+    margin-top: 8px;
+    min-height: 18px;
+}
+
+/* Dim non-matching items */
+.listing-item {
+    transition: opacity 0.15s ease;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #yds-search {
+        padding: 12px 16px;
+    }
+
+    .yds-bar {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #yds-input {
+        width: 100%;
+    }
+
+    #yds-counter {
+        text-align: center;
+    }
+}

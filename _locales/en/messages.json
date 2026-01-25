@@ -1,0 +1,8 @@
+{
+  "name": {
+    "message": "Yandex Disk Search"
+  },
+  "description": {
+    "message": "Fast search for files and folders on public Yandex Disk pages. Virtual scroll support, real-time filtering."
+  }
+}
