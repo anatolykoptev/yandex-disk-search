@@ -446,8 +446,6 @@
 
   // src/services/filter.ts
   var Filter = class {
-    constructor() {
-    }
     apply(query) {
       const q = (query == null ? void 0 : query.toLowerCase().trim()) || "";
       const items = getListItems();

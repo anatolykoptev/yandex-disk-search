@@ -2,7 +2,6 @@ import { getListItems, getItemName, showElement, hideElement } from '../utils/do
 import { logFilter } from '../utils/logger';
 
 export class Filter {
-  constructor() {}
 
   apply(query?: string): void {
     const q = query?.toLowerCase().trim() || '';

@@ -3,6 +3,7 @@ import { CONFIG } from '../constants/config';
 const PREFIX = '[YDS]';
 
 export function log(...args: unknown[]): void {
+  // eslint-disable-next-line no-console
   console.log(PREFIX, ...args);
 }
 

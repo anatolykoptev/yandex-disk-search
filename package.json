@@ -7,13 +7,20 @@
     "build": "esbuild src/content.ts --bundle --outfile=dist/content.js --target=chrome88 --format=iife",
     "watch": "esbuild src/content.ts --bundle --outfile=dist/content.js --target=chrome88 --format=iife --watch",
     "type-check": "tsc --noEmit",
-    "lint": "tsc --noEmit && echo 'Types OK'"
+    "lint": "eslint src/",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anatolykoptev/yandex-disk-search.git"
   },
-  "keywords": ["chrome-extension", "yandex-disk", "search"],
+  "keywords": [
+    "chrome-extension",
+    "yandex-disk",
+    "search"
+  ],
   "author": "anatolykoptev",
   "license": "MIT",
   "bugs": {
@@ -21,7 +28,14 @@
   },
   "homepage": "https://github.com/anatolykoptev/yandex-disk-search#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.53.1",
+    "@typescript-eslint/parser": "^8.53.1",
+    "@vitest/coverage-v8": "^4.0.18",
     "esbuild": "^0.27.2",
-    "typescript": "^5.9.3"
+    "eslint": "^9.39.2",
+    "jsdom": "^27.4.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.53.1",
+    "vitest": "^4.0.18"
   }
 }

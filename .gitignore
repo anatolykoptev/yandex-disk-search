@@ -13,4 +13,7 @@ Thumbs.db
 # Node
 node_modules/
 
+# Test coverage
+coverage/
+
 # Note: dist/ is NOT ignored - it contains the built extension
