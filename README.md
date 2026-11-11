@@ -1,6 +1,6 @@
 # Yandex Disk Search
 
-Chrome extension for fast file search on public Yandex Disk pages.
+Chrome extension (Manifest V3) for fast file search on public Yandex Disk pages. It adds a search bar to `disk.yandex.ru` public folders and filters the list as you type, including very long virtualised lists.
 
 ## Features
 
@@ -33,6 +33,8 @@ Then load in Chrome:
 npm run watch    # Watch mode with auto-rebuild
 npm run build    # Production build
 npm run type-check  # TypeScript validation
+npm run lint        # ESLint over src/
+npm test            # Vitest unit tests
 ```
 
 ## Project Structure
@@ -52,7 +54,8 @@ yandex-disk-search/
 │   ├── utils/           # DOM helpers, logger
 │   └── content.ts       # Entry point
 ├── dist/
-│   └── content.js       # Built extension
+│   ├── content.js       # Built extension (committed)
+│   └── content.css
 ├── icons/
 ├── _locales/
 ├── manifest.json
@@ -71,6 +74,10 @@ yandex-disk-search/
 - Chrome 88+
 - Works on `disk.yandex.ru` pages
 
+## Documentation
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the development workflow, [CLAUDE.md](CLAUDE.md) for notes aimed at coding agents, and [docs/INDEX.md](docs/INDEX.md) for every document.
+
 ## License
 
-MIT
+Apache-2.0, see [LICENSE](LICENSE).
