@@ -6,8 +6,8 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Changed
-- Apache-2.0 licence file added (July 2026). `package.json` still declares MIT; the
-  two should be reconciled by the owner.
+- Apache-2.0 licence file added (July 2026). `package.json` and `package-lock.json` now declare
+  Apache-2.0 too, matching `LICENSE`.
 
 ## 2.3.0 - 2026-01-25
 
